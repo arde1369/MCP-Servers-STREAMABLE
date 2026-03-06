@@ -11,5 +11,5 @@ def greeting(name:str) -> str:
     return f"Hello {name}"
 
 if __name__ == "__main__":
-    app = mcp.run(mount_path="/mcp", transport="streamable")
+    app = mcp.run(mount_path="/mcp", transport="streamable-http")
     uvicorn.run(app, host="0.0.0.0", port=8000)
