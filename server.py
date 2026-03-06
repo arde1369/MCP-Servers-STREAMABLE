@@ -10,4 +10,4 @@ def greeting(name:str) -> str:
     return f"Hello {name}"
 
 if __name__ == "__main__":
-    mcp.run(transport='streamable-http')
+    mcp.run_streamable_http_async()
