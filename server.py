@@ -1,4 +1,3 @@
-import uvicorn
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("greetings")
@@ -11,5 +10,4 @@ def greeting(name:str) -> str:
     return f"Hello {name}"
 
 if __name__ == "__main__":
-    app = mcp.run(transport="sse")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    mcp.run(transport='streamable-http')
